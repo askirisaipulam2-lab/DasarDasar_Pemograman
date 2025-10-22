@@ -1,0 +1,136 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xjikuFDgwCW-",
+        "outputId": "9bbe8b82-56e4-44eb-9ec4-8d2580fa7f33"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "['Astrea', 'Motor', 250, 'Hijau', 2]\n",
+            "['Astrea', 'Motor', 250, 'Hijau', 2, 12000, 'Kopling']\n",
+            "['Astrea', 'Motor', 'Yamaha', 250, 'Hijau', 2, 12000, 'Kopling']\n"
+          ]
+        }
+      ],
+      "source": [
+        "namaKendaraan = \"Astrea\"\n",
+        "jenisKendaraan = \"Motor\"\n",
+        "ccKendaraan = 250\n",
+        "warnaKendaraan = \"Hijau\"\n",
+        "rodaKendaraan = 2\n",
+        "data_kendaraan = [\n",
+        "    namaKendaraan, jenisKendaraan, ccKendaraan,\n",
+        "    warnaKendaraan, rodaKendaraan\n",
+        "]\n",
+        "print(data_kendaraan)\n",
+        "\n",
+        "hargaKendaraan = 12000\n",
+        "tipeKendaraan = \"Kopling\"\n",
+        "\n",
+        "data_kendaraan.append(hargaKendaraan)\n",
+        "data_kendaraan.append(tipeKendaraan)\n",
+        "print(data_kendaraan)\n",
+        "\n",
+        "merkKendaraan = \"Yamaha\"\n",
+        "data_kendaraan.insert(2, merkKendaraan)\n",
+        "print(data_kendaraan)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "_hGQMMhP9Gz1",
+        "outputId": "25ded8b0-f426-4d0d-c5cd-08531963e957",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Silahkan pilih menu yang di inginkan\n",
+            "====================================\n",
+            "1. Luas Persegi\n",
+            "2. Luas Lingkaran\n",
+            "3. Luas Segitiga\n",
+            "====================================\n",
+            "Kirimkan hanya angka saja,\n",
+            "jawaban = 3\n",
+            "<class 'str'>\n",
+            "masukan alas segitiga = 5\n",
+            "masukan tinggi segitiga = 6\n",
+            "luas segitiga 15.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "pilihan = input(\"\"\"\n",
+        "Silahkan pilih menu yang di inginkan\n",
+        "====================================\n",
+        "1. Luas Persegi\n",
+        "2. Luas Lingkaran\n",
+        "3. Luas Segitiga\n",
+        "====================================\n",
+        "Kirimkan hanya angka saja,\n",
+        "jawaban = \"\"\")\n",
+        "\n",
+        "print(type(pilihan))\n",
+        "match pilihan:\n",
+        "  case \"1\":\n",
+        "    sisi = int(input(\"sisi = \"))\n",
+        "    luas = sisi * sisi\n",
+        "\n",
+        "    print(f\"luas persegi dengan sisi {sisi} adalah {luas}\")\n",
+        "    # luas persegi\n",
+        "  case \"2\":\n",
+        "    # luas lingkaran\n",
+        "    # phi * jarjjari**2\n",
+        "    jarijari = int(input(\"jarijari = \"))\n",
+        "    luas = 3.14 * jarijari**2\n",
+        "\n",
+        "    print(f\"luas lingkaran dengan jarijari {jarijari} adalah {luas}\")\n",
+        "\n",
+        "    print( \"\")\n",
+        "  case \"3\":\n",
+        "    # luas segitiga\n",
+        "    # (alas * tinggi)/2\n",
+        "\n",
+        "    alas = float(input(\"masukan alas segitiga = \"))\n",
+        "    tinggi = float(input(\"masukan tinggi segitiga = \"))\n",
+        "\n",
+        "    luassegitiga = 0.5 * alas * tinggi\n",
+        "    print (\"luas segitiga\", luassegitiga)\n",
+        "\n",
+        "  case _:\n",
+        "    print(\"yaa tidak ada\")"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
